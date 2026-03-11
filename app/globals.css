@@ -17,7 +17,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-primary: #D93D00; 
+  --color-primary: #d93d00;
 }
 
 body {
@@ -26,11 +26,41 @@ body {
   font-family: "Babuka Mtavruli";
 }
 
-.primary-font{
+.primary-font {
   font-family: "Babuka Mtavruli";
 }
 
-.test{
+.test {
   font-family: "3D Unicode";
 }
 
+.lettuce {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 300px;
+  z-index: 50;
+  background-image: url("/assets/lettuce.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  rotate: 180deg;
+}
+
+@media (width >= 2060px) {
+  .testa {
+    align-items: center;
+  }
+  .pastas{
+    margin: auto;
+  }
+  .offer-buttons{
+    justify-content: center;
+  }
+  .offer-vector{
+    right: 30%;
+  }
+  .second-offer-vector{
+    right: 30%;
+    top: -2%;
+  }
+}
