@@ -14,7 +14,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full h-22.5 px-10 flex justify-between items-center fixed top-0 left-0 z-50">
+    <header className="w-full h-22.5 px-10 flex justify-between items-center fixed top-0 left-0 z-100">
       <div className="text-[32px] text-[#D93D00]">
         <h1>STREET#1</h1>
       </div>
