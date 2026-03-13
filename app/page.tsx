@@ -1,4 +1,5 @@
 import MenuItem from "@/components/MenuItem";
+import ReviewSlider from "@/components/ReviewSlider";
 import Image from "next/image";
 
 export default function Home() {
@@ -109,6 +110,23 @@ export default function Home() {
           <MenuItem />
           <MenuItem />
           <MenuItem />
+        </div>
+      </div>
+      {/* Review */}
+      <div className="w-full h-200 flex flex-col gap-25 px-15 py-20">
+        {/* header */}
+        <div className="w-full">
+          <h1 className="text-[#D93D00] text-[38px] test">ჩვენი მიმოხილვა</h1>
+          <h1 className="text-black text-[48px] primary-font">
+            გემრიელი მენიუ <span className="text-[#D93D00]">& ნუდლსი</span>
+          </h1>
+          <p className="text-[#00000098]">
+            მრავალფეროვანი მენიუ, რაც მთავარია თქვენთვის მორგებული.
+          </p>
+        </div>
+        {/* Reviews */}
+        <div className="w-full flex">
+          <ReviewSlider />
         </div>
       </div>
     </main>
