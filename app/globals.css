@@ -46,6 +46,12 @@ body {
   rotate: 180deg;
 }
 
+.callback{
+  background-image: url("/assets/pasta.png");
+  background-size: 120%;
+  background-position: center;
+}
+
 @media (width >= 2060px) {
   .testa {
     align-items: center;

@@ -129,6 +129,19 @@ export default function Home() {
           <ReviewSlider />
         </div>
       </div>
+      {/* Callback */}
+      <div className="w-full h-100 callback">
+        <div className="w-full h-full px-20 py-10 bg-[#d93d00ad]">
+          <h1 className="text-[56px] text-amber-50 leading-normal font-['Radio_Canada_Big',sans-serif]">Get your food from</h1>
+          <div className="w-full flex justify-between items-center">
+            <h1 className="text-[156px] text-amber-50">STREET#1</h1>
+            
+            <button className="w-122.75 h-22.5 inline-flex px-5.5 py-4 bg-amber-50 text-[#D93D00] justify-center items-center text-[48px] rounded-xl">
+              შეუკვეთე ახლავე
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
