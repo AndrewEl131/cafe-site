@@ -1,3 +1,4 @@
+import MenuItem from "@/components/MenuItem";
 import Image from "next/image";
 
 export default function Home() {
@@ -75,8 +76,39 @@ export default function Home() {
           </div>
         </div>
         <div className="w-[45vw] h-full relative">
-          <Image src={"/assets/Vector-white.png"} width={600} height={600} alt="" className="absolute top-[20%] right-[2%] offer-vector" />
-          <Image src={"/assets/spageti.png"} width={800} height={700} alt="" className="absolute top-[5%] right-[3%] second-offer-vector" />
+          <Image
+            src={"/assets/Vector-white.png"}
+            width={600}
+            height={600}
+            alt=""
+            className="absolute top-[20%] right-[2%] offer-vector"
+          />
+          <Image
+            src={"/assets/spageti.png"}
+            width={800}
+            height={700}
+            alt=""
+            className="absolute top-[5%] right-[3%] second-offer-vector"
+          />
+        </div>
+      </div>
+      {/* Menu */}
+      <div className="w-full h-200 flex flex-col gap-40 px-15 py-20 bg-[#EEEEEE]">
+        {/* header */}
+        <div className="w-full">
+          <h1 className="text-[#D93D00] text-[38px]">STREET#1's</h1>
+          <h1 className="text-[#D93D00] text-[48px] primary-font">
+            ტოპ <span className="text-black">ნუდლსი</span>
+          </h1>
+          <p className="text-[#00000098]">
+            მრავალფეროვანი მენიუ, რაც მთავარია თქვენთვის მორგებული.
+          </p>
+        </div>
+        {/* Menu Items */}
+        <div className="w-full flex justify-evenly">
+          <MenuItem />
+          <MenuItem />
+          <MenuItem />
         </div>
       </div>
     </main>
