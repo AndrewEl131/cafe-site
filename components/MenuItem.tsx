@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function MenuItem() {
   return (
-    <div className="w-103.5 h-80 flex flex-col items-center relative primary-font">
+    <div className="lg:w-103.5 h-80 flex flex-col items-center relative primary-font">
       <Image
         src={"/assets/spageti.png"}
         width={300}
@@ -17,10 +17,10 @@ export default function MenuItem() {
         </h1>
         <hr />
         <div className="w-full flex gap-5">
-          <button className="px-2 py-1.5 bg-[#D93D00] text-white text-2xl rounded-lg">
+          <button className="lg:h-0 h-10 px-2 py-1.5 bg-[#D93D00] text-white lg:text-2xl rounded-lg">
             ფასი: 12Gel
           </button>
-          <h1 className="text-[20px] leading-11.5">33% ფასდაკლება</h1>
+          <h1 className="lg:text-[20px] leading-11.5">33% ფასდაკლება</h1>
         </div>
       </div>
     </div>

@@ -1,17 +1,18 @@
 import MenuItem from "@/components/MenuItem";
 import ReviewSlider from "@/components/ReviewSlider";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="h-auto">
       <div className="h-screen flex relative overflow-x-hidden overflow-y-hidden">
-        <div className="w-[45vw] h-full flex justify-center mt-[20vmin]">
-          <div className="w-137.5 flex flex-col">
-            <h1 className="test text-[#D93D00] text-5xl">
+        <div className="lg:w-[45vw] w-full h-full flex justify-center lg:mt-[20vmin] mt-[30vmin] z-100">
+          <div className="lg:w-137.5 flex flex-col lg:px-0 lg:py-0 px-5 py-5">
+            <h1 className="test text-[#D93D00] lg:text-5xl text-3xl">
               გაქვს შანსი მიირთვა
             </h1>
-            <h1 className="text-[50px] primary-font font-semibold">
+            <h1 className="lg:text-[50px] text-4xl primary-font font-semibold">
               უგემრიელესი რამ
             </h1>
             <h1 className="text-[62px]">
@@ -27,14 +28,17 @@ export default function Home() {
               <button className="inline-flex items-center h-10 px-5 py-3.5 rounded-md bg-[#D93D00] text-amber-50">
                 დაჯავშნა
               </button>
-              <button className="inline-flex items-center h-10 px-5 py-3.5 rounded-md text-[#D93D00] border">
+              <Link
+                href="#menu"
+                className="inline-flex items-center h-10 px-5 py-3.5 rounded-md text-[#D93D00] border cursor-pointer"
+              >
                 მენიუ
-              </button>
+              </Link>
             </div>
           </div>
         </div>
 
-        <div className="w-[55vw] h-full relative">
+        <div className="w-[55vw] h-full relative lg:block hidden">
           <Image src={"/assets/Vector.png"} fill alt="bg" className="-z-50" />
           <Image
             src={"/assets/pasta.png"}
@@ -47,36 +51,36 @@ export default function Home() {
         <div className="lettuce"></div>
       </div>
       {/* offers */}
-      <div className="w-full h-200 flex bg-[#D93D00] z-50">
-        <div className="w-[55vw] h-full space-y-10 px-15 pt-20">
-          <div className="flex flex-col text-white testa">
-            <div className="w-133.5 text-[44px] text-[#D93D00] test px-3.5 py-3.5 bg-white rounded-full">
+      <div className="w-full lg:h-200 h-180 flex bg-[#D93D00] z-50">
+        <div className="lg:w-[55vw] w-full h-full space-y-10 lg:px-15 px-6 pt-20">
+          <div className="flex flex-col lg:gap-0 gap-4 text-white testa">
+            <div className="lg:w-133.5 w-full lg:text-[44px] text-[20px] lg:text-start text-center text-[#D93D00] test px-3.5 py-3.5 bg-white rounded-full">
               <h1>სპეციალური შეთავაზებები</h1>
             </div>
-            <h1 className="text-[60px] font-semibold primary-font">
+            <h1 className="lg:text-[60px] text-2xl lg:text-start text-center font-semibold primary-font">
               მიიღეთ 40% ფასდაკლება
             </h1>
-            <h1 className="text-[58px] primary-font mb-1">
+            <h1 className="lg:text-[58px] lg:text-start text-center primary-font mb-1">
               მენიუს ყველა პუნქტზე
             </h1>
-            <p className="w-130.5 text-[18px] opacity-60">
+            <p className="lg:w-130.5 w-full text-[18px] lg:text-start text-center opacity-60">
               ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და კლიენტს ყოველთვის
               განსხვავებულს ვთავაზობთ.
             </p>
           </div>
-          <div className="w-125 h-39 relative pastas">
+          <div className="lg:w-125 w-full lg:h-39 h-25 relative pastas">
             <Image src={"/assets/pastas.png"} fill alt="p" />
           </div>
-          <div className="w-full flex gap-5 offer-buttons">
-            <button className="w-47.5 px-5.5 py-3.5 border text-white rounded-lg text-[20px]">
+          <div className="w-full flex lg:flex-row flex-col items-center gap-5 offer-buttons">
+            <button className="w-47.5 px-5.5 lg:h-13 h-10 flex items-center justify-center lg:py-3.5 border text-white rounded-lg text-[20px]">
               შეთავაზებები
             </button>
-            <p className="w-93 text-[20px] opacity-50 text-white">
-              *ყოველთვის მაღალი ხარისხი ჩვენთთან უკმაყყოფილო არავინაა
+            <p className="lg:w-93 text-[20px] lg:text-start text-center opacity-50 text-white">
+              *ყოველთვის მაღალი ხარისხი ჩვენთთან უკმაყოფილო არავინაა
             </p>
           </div>
         </div>
-        <div className="w-[45vw] h-full relative">
+        <div className="w-[45vw] h-full relative lg:block hidden">
           <Image
             src={"/assets/Vector-white.png"}
             width={600}
@@ -94,9 +98,12 @@ export default function Home() {
         </div>
       </div>
       {/* Menu */}
-      <div className="w-full h-200 flex flex-col gap-40 px-15 py-20 bg-[#EEEEEE]">
+      <div
+        className="w-full lg:h-200 h-380 flex flex-col gap-40 lg:px-15 px-5 lg:py-20 py-5 bg-[#EEEEEE]"
+        id="menu"
+      >
         {/* header */}
-        <div className="w-full">
+        <div className="w-full lg:text-start text-center">
           <h1 className="text-[#D93D00] text-[38px]">STREET#1's</h1>
           <h1 className="text-[#D93D00] text-[48px] primary-font">
             ტოპ <span className="text-black">ნუდლსი</span>
@@ -106,18 +113,18 @@ export default function Home() {
           </p>
         </div>
         {/* Menu Items */}
-        <div className="w-full flex justify-evenly">
+        <div className="w-full flex lg:flex-row flex-col lg:gap-0 gap-25 justify-evenly">
           <MenuItem />
           <MenuItem />
           <MenuItem />
         </div>
       </div>
       {/* Review */}
-      <div className="w-full h-200 flex flex-col gap-25 px-15 py-20">
+      <div className="w-full h-200 lg:flex hidden flex-col gap-25 px-15 py-20">
         {/* header */}
-        <div className="w-full">
-          <h1 className="text-[#D93D00] text-[38px] test">ჩვენი მიმოხილვა</h1>
-          <h1 className="text-black text-[48px] primary-font">
+        <div className="w-full lg:text-start text-center lg:space-y-0 space-y-5">
+          <h1 className="text-[#D93D00] lg:text-[38px] text-3xl test">ჩვენი მიმოხილვა</h1>
+          <h1 className="text-black lg:text-[48px] text-4xl primary-font">
             გემრიელი მენიუ <span className="text-[#D93D00]">& ნუდლსი</span>
           </h1>
           <p className="text-[#00000098]">
@@ -125,18 +132,20 @@ export default function Home() {
           </p>
         </div>
         {/* Reviews */}
-        <div className="w-full flex">
+        <div className="w-full flex lg:flex-row flex-col">
           <ReviewSlider />
         </div>
       </div>
       {/* Callback */}
       <div className="w-full h-100 callback">
-        <div className="w-full h-full px-20 py-10 bg-[#d93d00ad]">
-          <h1 className="text-[56px] text-amber-50 leading-normal font-['Radio_Canada_Big',sans-serif]">Get your food from</h1>
-          <div className="w-full flex justify-between items-center">
-            <h1 className="text-[156px] text-amber-50">STREET#1</h1>
-            
-            <button className="w-122.75 h-22.5 inline-flex px-5.5 py-4 bg-amber-50 text-[#D93D00] justify-center items-center text-[48px] rounded-xl">
+        <div className="w-full h-full lg:px-20 px-5 lg:py-10 py-15 flex flex-col lg:gap-0 gap-10 bg-[#d93d00ad]">
+          <h1 className="lg:text-[56px] text-3xl lg:text-start text-center text-amber-50 leading-normal font-['Radio_Canada_Big',sans-serif]">
+            Get your food from
+          </h1>
+          <div className="w-full flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center">
+            <h1 className="lg:text-[156px] text-6xl text-amber-50">STREET#1</h1>
+
+            <button className="lg:w-122.75 w-45 lg:h-22.5 h-10 inline-flex px-5.5 lg:py-4 bg-amber-50 text-[#D93D00] justify-center items-center lg:text-[48px] rounded-xl">
               შეუკვეთე ახლავე
             </button>
           </div>
