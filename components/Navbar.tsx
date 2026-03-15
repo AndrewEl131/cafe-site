@@ -4,6 +4,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import BurgerMenu from "./BurgerMenu";
+import Link from "next/link";
 
 export default function Header() {
   const pathname = usePathname();
@@ -25,12 +26,14 @@ export default function Header() {
 
       <ul className="lg:flex hidden gap-12 primary-font">
         {links.map((link) => (
-          <li
+          <Link
             key={link.path}
             className={`${pathname === link.path ? "text-black" : "text-[#dbdbdb]"} text-[20px] font-normal`}
+            href={link.path}
           >
+            
             {link.name}
-          </li>
+          </Link>
         ))}
       </ul>
 

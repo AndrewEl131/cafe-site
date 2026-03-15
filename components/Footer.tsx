@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className='lg:h-47.5 h-55 flex flex-col justify-end gap-6'>
+    <footer className='lg:h-47.5 h-55 flex flex-col justify-end gap-6 z-100'>
         <div className="w-full font-['Radio_Canada_Big',sans-serif] flex lg:flex-row flex-col lg:justify-between lg:gap-0 gap-2 px-10">
             <h1 className='text-[36px] lg:text-start text-center'>Street#1.com</h1>
 

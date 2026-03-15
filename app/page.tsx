@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import MenuItem from "@/components/MenuItem";
 import ReviewSlider from "@/components/ReviewSlider";
 import Image from "next/image";
@@ -151,6 +152,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }
