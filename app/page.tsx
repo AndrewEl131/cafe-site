@@ -10,28 +10,28 @@ export default function Home() {
       <div className="h-screen flex relative overflow-x-hidden overflow-y-hidden">
         <div className="lg:w-[45vw] w-full h-full flex justify-center lg:mt-[20vmin] mt-[30vmin] z-100">
           <div className="lg:w-137.5 flex flex-col lg:px-0 lg:py-0 px-5 py-5">
-            <h1 className="test text-[#D93D00] lg:text-5xl text-3xl">
+            <h1 className="test text-[#D93D00] lg:text-5xl text-3xl lg:hover:ml-3 duration-300">
               გაქვს შანსი მიირთვა
             </h1>
-            <h1 className="lg:text-[50px] text-4xl primary-font font-semibold">
+            <h1 className="lg:text-[50px] text-4xl primary-font font-semibold lg:hover:ml-4 duration-300">
               უგემრიელესი რამ
             </h1>
-            <h1 className="text-[62px]">
+            <h1 className="text-[62px] lg:hover:ml-5 duration-300">
               შენს <span className="text-[#D93D00]">მაგიდაზე?</span>
             </h1>
             <div className="w-full mt-5">
-              <p className="text-[rgba(0,0,0,0.7)]">
+              <p className="text-[rgba(0,0,0,0.7)] lg:hover:ml-4.5 duration-300">
                 ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და კლიენტს ყოველთვის
                 განსხვავებულს ვთავაზობთ.
               </p>
             </div>
             <div className="w-full mt-5 space-x-5">
-              <button className="inline-flex items-center h-10 px-5 py-3.5 rounded-md bg-[#D93D00] text-amber-50">
+              <button className="inline-flex items-center h-10 px-5 py-3.5 rounded-md cursor-pointer bg-[#D93D00] text-amber-50 lg:hover:bg-amber-50 lg:hover:text-[#D93D00] transition-all duration-300">
                 დაჯავშნა
               </button>
               <Link
                 href="#menu"
-                className="inline-flex items-center h-10 px-5 py-3.5 rounded-md text-[#D93D00] border cursor-pointer"
+                className="inline-flex items-center h-10 px-5 py-3.5 rounded-md text-[#D93D00] border cursor-pointer lg:hover:bg-[#D93D00] lg:hover:text-amber-50 transition-all duration-300"
               >
                 მენიუ
               </Link>
@@ -52,16 +52,16 @@ export default function Home() {
         <div className="lettuce"></div>
       </div>
       {/* offers */}
-      <div className="w-full lg:h-200 h-180 flex bg-[#D93D00] z-50">
+      <div className="w-full lg:h-200 h-180 flex bg-[#D93D00] z-50 offers">
         <div className="lg:w-[55vw] w-full h-full space-y-10 lg:px-15 px-6 pt-20">
           <div className="flex flex-col lg:gap-0 gap-4 text-white testa">
-            <div className="lg:w-133.5 w-full lg:text-[44px] text-[20px] lg:text-start text-center text-[#D93D00] test px-3.5 py-3.5 bg-white rounded-full">
+            <div className="lg:w-133.5 w-full lg:text-[44px] text-[20px] lg:text-start text-center text-[#D93D00] test px-3.5 py-3.5 bg-white rounded-full lg:hover:mb-4 duration-300">
               <h1>სპეციალური შეთავაზებები</h1>
             </div>
-            <h1 className="lg:text-[60px] text-2xl lg:text-start text-center font-semibold primary-font">
+            <h1 className="xl:text-[60px] lg:text-[48px] text-2xl lg:text-start text-center font-semibold primary-font">
               მიიღეთ 40% ფასდაკლება
             </h1>
-            <h1 className="lg:text-[58px] lg:text-start text-center primary-font mb-1">
+            <h1 className="xl:text-[58px] lg:text-[45px] lg:text-start text-center primary-font mb-1">
               მენიუს ყველა პუნქტზე
             </h1>
             <p className="lg:w-130.5 w-full text-[18px] lg:text-start text-center opacity-60">
@@ -69,11 +69,11 @@ export default function Home() {
               განსხვავებულს ვთავაზობთ.
             </p>
           </div>
-          <div className="lg:w-125 w-full lg:h-39 h-25 relative pastas">
+          <div className="lg:w-125 w-full lg:h-39 md:w-110 lg:mx-0 md:mx-auto h-25 relative pastas">
             <Image src={"/assets/pastas.png"} fill alt="p" />
           </div>
           <div className="w-full flex lg:flex-row flex-col items-center gap-5 offer-buttons">
-            <button className="w-47.5 px-5.5 lg:h-13 h-10 flex items-center justify-center lg:py-3.5 border text-white rounded-lg text-[20px]">
+            <button className="w-47.5 px-5.5 lg:h-13 h-10 flex items-center justify-center lg:py-3.5 border text-white rounded-lg text-[20px] lg:hover:bg-amber-50 lg:hover:text-[#D93D00] transition-all duration-300">
               შეთავაზებები
             </button>
             <p className="lg:w-93 text-[20px] lg:text-start text-center opacity-50 text-white">
@@ -104,7 +104,7 @@ export default function Home() {
         id="menu"
       >
         {/* header */}
-        <div className="w-full lg:text-start text-center">
+        <div className="w-full lg:text-start 2xl:space-y-1 text-center">
           <h1 className="text-[#D93D00] text-[38px]">STREET#1's</h1>
           <h1 className="text-[#D93D00] text-[48px] primary-font">
             ტოპ <span className="text-black">ნუდლსი</span>

@@ -13,7 +13,7 @@ export default function Footer() {
                 <h1>Privacy Policy</h1>
             </div>
 
-            <div className='lg:w-50 w-full lg:h-14 h-15.5 relative'>
+            <div className='md:w-50 lg:mx-0 md:mx-auto w-full lg:h-14 h-15.5 relative'>
                 <Image src={"/assets/socials.png"} fill alt='' />
             </div>
         </div>

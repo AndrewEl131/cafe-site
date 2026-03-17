@@ -28,7 +28,7 @@ export default function Header() {
         {links.map((link) => (
           <Link
             key={link.path}
-            className={`${pathname === link.path ? "text-black" : "text-[#dbdbdb]"} text-[20px] font-normal`}
+            className={`${pathname === link.path ? "text-black hover:text-[#d4d4d4]" : "text-[#dbdbdb] hover:text-[#0f0f0f]"} text-[20px] font-normal duration-200`}
             href={link.path}
           >
             
