@@ -17,7 +17,7 @@ export default function MenuItem() {
         </h1>
         <hr />
         <div className="w-full flex gap-5">
-          <button className="lg:h-12 h-10 px-2 py-1.5 bg-[#D93D00] text-white lg:text-2xl rounded-lg">
+          <button className="lg:h-12 h-10 px-2 py-1.5 bg-[#D93D00] text-white lg:text-2xl rounded-lg cursor-pointer lg:hover:bg-amber-50 lg:hover:text-[#D93D00] transition-all duration-300">
             ფასი: 12Gel
           </button>
           <h1 className="lg:text-[20px] leading-11.5">33% ფასდაკლება</h1>

@@ -2,18 +2,18 @@ import React from "react";
 
 export default function contact() {
   return (
-    <main className="h-screen overflow-y-hidden relative primary-font flex">
-      <div className="w-[50vw] h-full flex flex-col items-center pt-[10vmin] gap-[10vmin]">
+    <main className="h-screen lg:overflow-y-hidden relative primary-font flex lg:flex-row flex-col lg:px-0 px-5">
+      <div className="lg:w-[50vw] w-full lg:h-full h-120 flex flex-col items-center lg:pt-[10vmin] pt-20 gap-[10vmin]">
         <div className="space-y-5">
-          <h1 className="test text-[64px] text-[#FC530A]">დაგვეკონტაქტე</h1>
-          <h1 className="text-2xl">გაგვიხარდება შენი მოსმენა</h1>
-          <p className="w-97 text-[#484848] text-justify">
+          <h1 className="test lg:text-[64px] text-2xl text-[#FC530A]">დაგვეკონტაქტე</h1>
+          <h1 className="lg:text-2xl">გაგვიხარდება შენი მოსმენა</h1>
+          <p className="lg:w-97 w-full text-[#484848] text-justify">
             თუ შენ გაქვს რამე სათქმელი ჩვენთან, ჩვენ გაგვიხარდება შენი აზრის
             მოსმენა, თუნდაც ეს იყოს ჯანსარი კრიტიკა, ან სიყვარული ჩვენზე.
           </p>
         </div>
 
-        <div className="w-103.5">
+        <div className="lg:w-103.5 w-full">
           <div className="w-full flex items-center gap-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ export default function contact() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 640 640"
-              className="mr-3 w-9 h-9"
+              className="lg:mr-3 mr-1.5 w-9 h-9"
             >
               <path
                 fill="rgb(217, 61, 0)"
@@ -89,38 +89,38 @@ export default function contact() {
               />
             </svg>
 
-            <h1 className="text-[#D93D00] font-semibold text-2xl underline">
+            <h1 className="text-[#D93D00] font-semibold lg:text-2xl text-[20px] underline">
               streetone6666@gmail.com
             </h1>
           </div>
         </div>
       </div>
-      <div className="w-[50vw] flex justify-center pt-[25vmin]">
-        <form className="w-110 flex flex-col gap-3">
-          <div className="w-full flex gap-13">
-            <div className="w-50 flex flex-col text-[#D93D00]">
-              <label className="text-[20px]">სახელი</label>
-              <input type="text" className="h-8.5 border-2" />
+      <div className="lg:w-[50vw] w-full flex justify-center lg:pt-[25vmin] z-100">
+        <form className="lg:w-110 w-full flex flex-col gap-3">
+          <div className="w-full flex lg:gap-13 gap-9">
+            <div className="lg:w-50 w-35 flex flex-col text-[#D93D00]">
+              <label className="lg:text-[20px]">სახელი</label>
+              <input type="text" className="h-8.5 border-2 text-[#4e4e4e] px-1" />
             </div>
-            <div className="w-50 flex flex-col text-[#D93D00]">
-              <label className="text-[20px]">გვარი</label>
-              <input type="text" className="h-8.5 border-2" />
+            <div className="lg:w-50 w-35 flex flex-col text-[#D93D00]">
+              <label className="lg:text-[20px]">გვარი</label>
+              <input type="text" className="h-8.5 border-2 text-[#4e4e4e] px-1" />
             </div>
           </div>
           <div className="w-full flex flex-col text-[#D93D00]">
             <label className="text-[20px]">ელექტრონული ფოსტა</label>
-            <input type="text" className="h-8.5 border-2" />
+            <input type="mail" className="h-8.5 border-2 text-[#4e4e4e] px-1" />
           </div>
           <div className="w-full flex flex-col text-[#D93D00]">
-            <label className="text-[20px]">ელექტრონული ფოსტა</label>
-            <textarea className="h-20 border-2" />
+            <label className="text-[20px]">წერილი</label>
+            <textarea className="h-20 border-2 text-[#4e4e4e] px-1" />
           </div>
           <div className="w-full flex justify-end">
-            <button className="px-3.75 py-1.5 bg-[#D93D00] text-amber-50 text-[20px]">გაგზავნა</button>
+            <button type="button" className="px-3.75 py-1.5 bg-[#D93D00] text-amber-50 text-[20px]">გაგზავნა</button>
           </div>
         </form>
       </div>
-      <div className="lettuce"></div>
+      <div className="lettuce lg:block hidden"></div>
     </main>
   );
 }

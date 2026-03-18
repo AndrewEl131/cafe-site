@@ -5,13 +5,13 @@ import Image from "next/image";
 export default function about() {
   return (
     <main className="relative">
-      <div className="w-119.25 h-85 absolute top-55 place-self-center">
-        <Image src={"/assets/banner.jpg"} fill alt="" />
+      <div className="lg:w-119.25 w-60 lg:h-85 h-50 absolute top-55 place-self-center">
+        <Image src={"/assets/banner.jpg"} fill alt="" className="rounded-xl" />
       </div>
       <div className="w-full h-75 bg-[#FC530A] flex justify-center items-center">
-        <h1 className="test text-[64px] text-amber-50">ჩვენი ამბავი</h1>
+        <h1 className="test lg:text-[64px] text-4xl text-amber-50">ჩვენი ამბავი</h1>
       </div>
-      <div className="w-2xl h-auto py-5 mx-auto mt-70">
+      <div className="lg:w-2xl h-auto py-5 mx-auto lg:mt-70 mt-30 lg:px-0 px-5">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
           repellat cum culpa aut natus perferendis illum, consectetur, quos eos

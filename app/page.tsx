@@ -17,11 +17,11 @@ export default function Home() {
               უგემრიელესი რამ
             </h1>
             <h1 className="text-[62px] lg:hover:ml-5 duration-300">
-              შენს <span className="text-[#D93D00]">მაგიდაზე?</span>
+              შენს <span className="text-[#D93D00]">მაგიდაზე</span>
             </h1>
             <div className="w-full mt-5">
               <p className="text-[rgba(0,0,0,0.7)] lg:hover:ml-4.5 duration-300">
-                ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და კლიენტს ყოველთვის
+                ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და მომხამერებელს ყოველთვის
                 განსხვავებულს ვთავაზობთ.
               </p>
             </div>
@@ -65,7 +65,7 @@ export default function Home() {
               მენიუს ყველა პუნქტზე
             </h1>
             <p className="lg:w-130.5 w-full text-[18px] lg:text-start text-center opacity-60">
-              ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და კლიენტს ყოველთვის
+              ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და მომხმარებელს ყოველთვის
               განსხვავებულს ვთავაზობთ.
             </p>
           </div>
@@ -73,11 +73,11 @@ export default function Home() {
             <Image src={"/assets/pastas.png"} fill alt="p" />
           </div>
           <div className="w-full flex lg:flex-row flex-col items-center gap-5 offer-buttons">
-            <button className="w-47.5 px-5.5 lg:h-13 h-10 flex items-center justify-center lg:py-3.5 border text-white rounded-lg text-[20px] lg:hover:bg-amber-50 lg:hover:text-[#D93D00] transition-all duration-300">
+            <button className="w-47.5 px-5.5 lg:h-13 h-10 flex items-center justify-center lg:py-3.5 border text-white rounded-lg text-[20px] cursor-pointer lg:hover:bg-amber-50 lg:hover:text-[#D93D00] transition-all duration-300">
               შეთავაზებები
             </button>
             <p className="lg:w-93 text-[20px] lg:text-start text-center opacity-50 text-white">
-              *ყოველთვის მაღალი ხარისხი ჩვენთთან უკმაყოფილო არავინაა
+              *ყოველთვის მაღალი ხარისხი, ჩვენთთან უკმაყოფილო არავინაა
             </p>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function Home() {
           <div className="w-full flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center">
             <h1 className="lg:text-[156px] text-6xl text-amber-50">STREET#1</h1>
 
-            <button className="lg:w-122.75 w-45 lg:h-22.5 h-10 inline-flex px-5.5 lg:py-4 bg-amber-50 text-[#D93D00] justify-center items-center lg:text-[48px] rounded-xl">
+            <button className="lg:w-122.75 w-45 lg:h-22.5 h-10 inline-flex px-5.5 lg:py-4 bg-amber-50 text-[#D93D00] justify-center items-center lg:text-[48px] rounded-xl cursor-pointer lg:hover:bg-[#D93D00] lg:hover:text-amber-50 transition-all duration-300">
               შეუკვეთე ახლავე
             </button>
           </div>

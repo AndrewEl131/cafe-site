@@ -19,7 +19,7 @@ export default function Header() {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   return (
-    <header className="w-full lg:h-22.5 h-20 lg:px-10 px-5 flex justify-between items-center fixed top-0 left-0 z-100">
+    <header className="w-full lg:h-22.5 h-20 lg:px-10 px-5 flex justify-between items-center fixed top-0 left-0 z-150">
       <div className="text-[32px] text-[#D93D00]">
         <h1>STREET#1</h1>
       </div>
@@ -55,7 +55,7 @@ export default function Header() {
       )}
 
       {isBurgerOpen && (
-        <div className="w-50 h-300 flex flex-col gap-5 px-5 py-5 bg-[#D93D00] absolute top-0 right-0 scale-z-125">
+        <div className="w-50 h-300 flex flex-col gap-5 px-5 py-5 bg-[#D93D00] absolute top-0 right-0 z-120">
           <div className="w-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,12 +71,13 @@ export default function Header() {
 
           <ul className="w-full flex flex-col gap-5">
             {links.map((link) => (
-              <li
+              <Link
                 key={link.path}
                 className={`${pathname === link.path ? "text-black" : "text-[#dbdbdb]"} text-[20px] font-normal`}
+                href={link.path}
               >
                 {link.name}
-              </li>
+              </Link>
             ))}
           </ul>
         </div>
