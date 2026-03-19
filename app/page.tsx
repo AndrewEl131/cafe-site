@@ -30,7 +30,7 @@ export default function Home() {
                 დაჯავშნა
               </button>
               <Link
-                href="#menu"
+                href="/menu"
                 className="inline-flex items-center h-10 px-5 py-3.5 rounded-md text-[#D93D00] border cursor-pointer lg:hover:bg-[#D93D00] lg:hover:text-amber-50 transition-all duration-300"
               >
                 მენიუ

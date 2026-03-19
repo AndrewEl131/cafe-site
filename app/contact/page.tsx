@@ -1,11 +1,14 @@
 import React from "react";
+import ContactForm from "./ContactForm";
 
 export default function contact() {
   return (
     <main className="h-screen lg:overflow-y-hidden relative primary-font flex lg:flex-row flex-col lg:px-0 px-5">
       <div className="lg:w-[50vw] w-full lg:h-full h-120 flex flex-col items-center lg:pt-[10vmin] pt-20 gap-[10vmin]">
         <div className="space-y-5">
-          <h1 className="test lg:text-[64px] text-2xl text-[#FC530A]">დაგვეკონტაქტე</h1>
+          <h1 className="test lg:text-[64px] text-2xl text-[#FC530A]">
+            დაგვეკონტაქტე
+          </h1>
           <h1 className="lg:text-2xl">გაგვიხარდება შენი მოსმენა</h1>
           <p className="lg:w-97 w-full text-[#484848] text-justify">
             თუ შენ გაქვს რამე სათქმელი ჩვენთან, ჩვენ გაგვიხარდება შენი აზრის
@@ -96,29 +99,7 @@ export default function contact() {
         </div>
       </div>
       <div className="lg:w-[50vw] w-full flex justify-center lg:pt-[25vmin] z-100">
-        <form className="lg:w-110 w-full flex flex-col gap-3">
-          <div className="w-full flex lg:gap-13 gap-9">
-            <div className="lg:w-50 w-35 flex flex-col text-[#D93D00]">
-              <label className="lg:text-[20px]">სახელი</label>
-              <input type="text" className="h-8.5 border-2 text-[#4e4e4e] px-1" />
-            </div>
-            <div className="lg:w-50 w-35 flex flex-col text-[#D93D00]">
-              <label className="lg:text-[20px]">გვარი</label>
-              <input type="text" className="h-8.5 border-2 text-[#4e4e4e] px-1" />
-            </div>
-          </div>
-          <div className="w-full flex flex-col text-[#D93D00]">
-            <label className="text-[20px]">ელექტრონული ფოსტა</label>
-            <input type="mail" className="h-8.5 border-2 text-[#4e4e4e] px-1" />
-          </div>
-          <div className="w-full flex flex-col text-[#D93D00]">
-            <label className="text-[20px]">წერილი</label>
-            <textarea className="h-20 border-2 text-[#4e4e4e] px-1" />
-          </div>
-          <div className="w-full flex justify-end">
-            <button type="button" className="px-3.75 py-1.5 bg-[#D93D00] text-amber-50 text-[20px]">გაგზავნა</button>
-          </div>
-        </form>
+        <ContactForm />
       </div>
       <div className="lettuce lg:block hidden"></div>
     </main>
