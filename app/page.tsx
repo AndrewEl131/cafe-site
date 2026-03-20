@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import MenuItem from "@/components/MenuItem";
 import ReviewSlider from "@/components/ReviewSlider";
+import Reveal from "@/hooks/useReveal";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,7 +11,7 @@ export default function Home() {
       <div className="h-screen flex relative overflow-x-hidden overflow-y-hidden">
         <div className="lg:w-[45vw] w-full h-full flex justify-center lg:mt-[20vmin] mt-[30vmin] z-100">
           <div className="lg:w-137.5 flex flex-col lg:px-0 lg:py-0 px-5 py-5">
-            <h1 className="test text-[#D93D00] lg:text-5xl text-3xl lg:hover:ml-3 duration-300">
+            <h1 className="test text-[#D93D00] lg:text-5xl text-3xl lg:hover:ml-3 duration-300 fade-up">
               გაქვს შანსი მიირთვა
             </h1>
             <h1 className="lg:text-[50px] text-4xl primary-font font-semibold lg:hover:ml-4 duration-300">
@@ -46,7 +47,7 @@ export default function Home() {
             width={600}
             height={600}
             alt=""
-            className="absolute left-1/2 top-1/2  min-[2560px]:top-[20%] z-50 -translate-x-1/2 -translate-y-1/2"
+            className="absolute left-1/2 top-1/2  min-[2560px]:top-[20%] z-50 -translate-x-1/2 -translate-y-1/2 scale-in"
           />
         </div>
         <div className="lettuce"></div>
@@ -55,9 +56,11 @@ export default function Home() {
       <div className="w-full lg:h-200 h-180 flex bg-[#D93D00] z-50 offers">
         <div className="lg:w-[55vw] w-full h-full space-y-10 lg:px-15 px-6 pt-20">
           <div className="flex flex-col lg:gap-0 gap-4 text-white testa">
-            <div className="lg:w-133.5 w-full lg:text-[44px] text-[20px] lg:text-start text-center text-[#D93D00] test px-3.5 py-3.5 bg-white rounded-full lg:hover:mb-4 duration-300">
+            <Reveal>
+            <div className="lg:w-133.5 w-full lg:text-[44px] text-[20px] lg:text-start text-center text-[#D93D00] test px-3.5 py-3.5 bg-white rounded-full lg:hover:mb-4 duration-300 transition-all ">
               <h1>სპეციალური შეთავაზებები</h1>
             </div>
+        
             <h1 className="xl:text-[60px] lg:text-[48px] text-2xl lg:text-start text-center font-semibold primary-font">
               მიიღეთ 40% ფასდაკლება
             </h1>
@@ -68,6 +71,7 @@ export default function Home() {
               ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და მომხმარებელს ყოველთვის
               განსხვავებულს ვთავაზობთ.
             </p>
+            </Reveal>
           </div>
           <div className="lg:w-125 w-full lg:h-39 md:w-110 lg:mx-0 md:mx-auto h-25 relative pastas">
             <Image src={"/assets/pastas.png"} fill alt="p" />
@@ -104,6 +108,7 @@ export default function Home() {
         id="menu"
       >
         {/* header */}
+        <Reveal>
         <div className="w-full lg:text-start 2xl:space-y-1 text-center">
           <h1 className="text-[#D93D00] text-[38px]">STREET#1's</h1>
           <h1 className="text-[#D93D00] text-[48px] primary-font">
@@ -113,6 +118,7 @@ export default function Home() {
             მრავალფეროვანი მენიუ, რაც მთავარია თქვენთვის მორგებული.
           </p>
         </div>
+        </Reveal>
         {/* Menu Items */}
         <div className="w-full flex lg:flex-row flex-col lg:gap-0 gap-25 justify-evenly">
           <MenuItem />
@@ -133,13 +139,16 @@ export default function Home() {
           </p>
         </div>
         {/* Reviews */}
+        <Reveal>
         <div className="w-full flex lg:flex-row flex-col">
           <ReviewSlider />
         </div>
+        </Reveal>
       </div>
       {/* Callback */}
       <div className="w-full h-100 callback">
         <div className="w-full h-full lg:px-20 px-5 lg:py-10 py-15 flex flex-col lg:gap-0 gap-10 bg-[#d93d00ad]">
+          <Reveal>
           <h1 className="lg:text-[56px] text-3xl lg:text-start text-center text-amber-50 leading-normal font-['Radio_Canada_Big',sans-serif]">
             Get your food from
           </h1>
@@ -150,6 +159,7 @@ export default function Home() {
               შეუკვეთე ახლავე
             </button>
           </div>
+          </Reveal>
         </div>
       </div>
       <Footer />

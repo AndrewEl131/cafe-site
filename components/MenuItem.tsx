@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import Reveal from "@/hooks/useReveal";
 
 export default function MenuItem() {
   return (
+    <Reveal>
     <div className="lg:w-103.5 h-80 flex flex-col items-center relative primary-font lg:hover:ml-5 duration-300">
       <Image
         src={"/assets/spageti.png"}
@@ -24,5 +26,6 @@ export default function MenuItem() {
         </div>
       </div>
     </div>
+    </Reveal>
   );
 }

@@ -35,13 +35,13 @@ export default function menu() {
 
   return (
     <main className="pt-20">
-      <h1 className="text-5xl text-[#D93D00] text-center">STREET#1 / Menu</h1>
+      <h1 className="text-5xl text-[#D93D00] text-center fade-up">STREET#1 / Menu</h1>
       <div className="w-full flex justify-center mt-5">
         <div className="grid grid-cols-2 lg:gap-25 xl:gap-35 2xl:gap-40">
           {menuCategories.map((item: MenuCategory) => (
             <div
               key={item._id}
-              className="w-137.5 space-y-8 py-7 border-t border-[#D93D00]"
+              className="w-137.5 space-y-8 py-5 border-t-2 border-[#D93D00]"
             >
               <div className="text-[32px]">
                 <h1 className="primary-font">{item.kaTitle}</h1>
@@ -57,7 +57,7 @@ export default function menu() {
                       <h1 className="primary-font">{menuItem.kaTitle}</h1>
                       <h1 className="font-sans">/{menuItem.enTitle}</h1>
                     </div>
-                    <h1 className="font-sans font-normal text-[#b3b318]">
+                    <h1 className="font-sans font-medium text-[#b9b919]">
                       {menuItem.priceFrom === menuItem.priceTo
                         ? `${menuItem.priceFrom}GEL`
                         : `${menuItem.priceFrom}-${menuItem.priceTo}GEL`}
