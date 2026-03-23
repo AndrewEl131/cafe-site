@@ -70,6 +70,9 @@ body {
     right: 30%;
     top: -2%;
   }
+  .m{
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 /* animations */

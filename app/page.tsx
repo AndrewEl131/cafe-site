@@ -112,7 +112,7 @@ export default function Home() {
         <div className="w-full lg:text-start 2xl:space-y-1 text-center">
           <h1 className="text-[#D93D00] text-[38px]">STREET#1's</h1>
           <h1 className="text-[#D93D00] text-[48px] primary-font">
-            ტოპ <span className="text-black">ნუდლსი</span>
+            ტოპ <span className="text-black">კერძები</span>
           </h1>
           <p className="text-[#00000098]">
             მრავალფეროვანი მენიუ, რაც მთავარია თქვენთვის მორგებული.
@@ -121,9 +121,9 @@ export default function Home() {
         </Reveal>
         {/* Menu Items */}
         <div className="w-full flex lg:flex-row flex-col lg:gap-0 gap-25 justify-evenly">
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
+          <MenuItem img="/assets/main-burger.png" title="საფირმო ბურგერი" price={20} />
+          <MenuItem img="/assets/cheeseburger.png" title="ჩიზბურგერი" price={13} />
+          <MenuItem img="/assets/peperoni.webp" title="პიცა პეპერონი" price={23.5} />
         </div>
       </div>
       {/* Review */}
@@ -132,7 +132,7 @@ export default function Home() {
         <div className="w-full lg:text-start text-center lg:space-y-0 space-y-5">
           <h1 className="text-[#D93D00] lg:text-[38px] text-3xl test">ჩვენი მიმოხილვა</h1>
           <h1 className="text-black lg:text-[48px] text-4xl primary-font">
-            გემრიელი მენიუ <span className="text-[#D93D00]">& ნუდლსი</span>
+            გემრიელი მენიუ <span className="text-[#D93D00]">& მომსახურეობა</span>
           </h1>
           <p className="text-[#00000098]">
             მრავალფეროვანი მენიუ, რაც მთავარია თქვენთვის მორგებული.
