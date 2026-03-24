@@ -25,7 +25,7 @@ export default function ContactForm() {
       return setErr("გთხოვთ მიუთითოთ ვალიდური ელექტრონული ფოსტა !");
     }
     
-    const res = await fetch("http://localhost:3000/api/send-mail", {
+    const res = await fetch("/api/send-mail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

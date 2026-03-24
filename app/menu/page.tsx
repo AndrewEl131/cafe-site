@@ -23,7 +23,7 @@ export default function menu() {
   const [menuCategories, setMenuCategories] = useState([]);
 
   async function getMenuCategories() {
-    const res = await fetch("https://cafe-site-rust.vercel.app/api/menu");
+    const res = await fetch("/api/menu");
     const data = await res.json();
     setMenuCategories(data);
     console.log(data);
