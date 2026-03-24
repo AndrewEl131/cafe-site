@@ -4,6 +4,12 @@ import ReviewSlider from "@/components/ReviewSlider";
 import Reveal from "@/hooks/useReveal";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "მთავარი",
+  description: "A description for the page",
+};
 
 export default function Home() {
   return (
@@ -22,8 +28,8 @@ export default function Home() {
             </h1>
             <div className="w-full mt-5">
               <p className="text-[rgba(0,0,0,0.7)] lg:hover:ml-4.5 duration-300">
-                ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და მომხამერებელს ყოველთვის
-                განსხვავებულს ვთავაზობთ.
+                ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და მომხამერებელს
+                ყოველთვის განსხვავებულს ვთავაზობთ.
               </p>
             </div>
             <div className="w-full mt-5 space-x-5">
@@ -56,22 +62,22 @@ export default function Home() {
       <div className="w-full lg:h-200 h-130 flex bg-[#D93D00] z-50 offers">
         <div className="lg:w-[55vw] w-full h-full space-y-10 lg:px-15 px-6 pt-20">
           <Reveal>
-          <div className="flex flex-col lg:gap-0 gap-3 text-white testa">
-            <div className="lg:w-133.5 w-full lg:text-[44px] text-[20px] lg:text-start text-center text-[#D93D00] test px-3.5 py-3.5 bg-white rounded-full lg:hover:mb-4 duration-300 transition-all ">
-              <h1>სპეციალური შეთავაზებები</h1>
+            <div className="flex flex-col lg:gap-0 gap-3 text-white testa">
+              <div className="lg:w-133.5 w-full lg:text-[44px] text-[20px] lg:text-start text-center text-[#D93D00] test px-3.5 py-3.5 bg-white rounded-full lg:hover:mb-4 duration-300 transition-all ">
+                <h1>სპეციალური შეთავაზებები</h1>
+              </div>
+
+              <h1 className="xl:text-[60px] lg:text-[48px] text-2xl lg:text-start text-center font-semibold primary-font">
+                მიიღეთ 40% ფასდაკლება
+              </h1>
+              <h1 className="xl:text-[58px] lg:text-[45px] text-[18px] lg:text-start text-center primary-font mb-1">
+                მენიუს ყველა პუნქტზე
+              </h1>
+              <p className="lg:w-130.5 w-full text-[18px] lg:text-start text-center opacity-60">
+                ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და მომხმარებელს
+                ყოველთვის განსხვავებულს ვთავაზობთ.
+              </p>
             </div>
-        
-            <h1 className="xl:text-[60px] lg:text-[48px] text-2xl lg:text-start text-center font-semibold primary-font">
-              მიიღეთ 40% ფასდაკლება
-            </h1>
-            <h1 className="xl:text-[58px] lg:text-[45px] text-[18px] lg:text-start text-center primary-font mb-1">
-              მენიუს ყველა პუნქტზე
-            </h1>
-            <p className="lg:w-130.5 w-full text-[18px] lg:text-start text-center opacity-60">
-              ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და მომხმარებელს ყოველთვის
-              განსხვავებულს ვთავაზობთ.
-            </p>
-          </div>
           </Reveal>
           <div className="lg:w-125 lg:block hidden w-full lg:h-39 md:w-110 lg:mx-0 md:mx-auto h-23 relative pastas">
             <Image src={"/assets/pastas.png"} fill alt="p" />
@@ -104,35 +110,69 @@ export default function Home() {
       </div>
       {/* Menu */}
       <div
-        className="w-full lg:h-200 h-380 flex flex-col gap-40 lg:px-15 px-5 lg:py-20 py-5 bg-[#EEEEEE]"
+        className="w-full lg:h-200 h-400 flex flex-col gap-40 lg:px-15 px-5 lg:py-20 py-5 bg-[#EEEEEE]"
         id="menu"
       >
         {/* header */}
         <Reveal>
-        <div className="w-full lg:text-start 2xl:space-y-1 text-center">
-          <h1 className="text-[#D93D00] text-[38px]">STREET#1's</h1>
-          <h1 className="text-[#D93D00] text-[48px] primary-font">
-            ტოპ <span className="text-black">კერძები</span>
-          </h1>
-          <p className="text-[#00000098]">
-            მრავალფეროვანი მენიუ, რაც მთავარია თქვენთვის მორგებული.
-          </p>
-        </div>
+          <div className="w-full lg:text-start 2xl:space-y-1 text-center">
+            <h1 className="text-[#D93D00] text-[38px]">STREET#1's</h1>
+            <h1 className="text-[#D93D00] text-[48px] primary-font">
+              ტოპ <span className="text-black">კერძები</span>
+            </h1>
+            <p className="text-[#00000098]">
+              მრავალფეროვანი მენიუ, რაც მთავარია თქვენთვის მორგებული.
+            </p>
+          </div>
         </Reveal>
         {/* Menu Items */}
-        <div className="w-full flex lg:flex-row flex-col items-center lg:gap-0 gap-25 justify-evenly">
-          <MenuItem img="/assets/main-burger.png" title="საფირმო ბურგერი" price={20} />
-          <MenuItem img="/assets/cheeseburger.png" title="ჩიზბურგერი" price={13} />
-          <MenuItem img="/assets/peperoni.webp" title="პიცა პეპერონი" price={23.5} />
+        <div className="">
+          <div className="w-full flex lg:flex-row flex-col items-center lg:gap-0 gap-25 justify-evenly">
+            <MenuItem
+              img="/assets/main-burger.png"
+              title="საფირმო ბურგერი"
+              price={20}
+            />
+            <MenuItem
+              img="/assets/cheeseburger.png"
+              title="ჩიზბურგერი"
+              price={13}
+            />
+            <MenuItem
+              img="/assets/peperoni.webp"
+              title="პიცა პეპერონი"
+              price={23.5}
+            />
+          </div>
+          <div className="w-full flex justify-center">
+            <Link
+              href={"/menu"}
+              className="inline-flex items-center gap-3 lg:hover:gap-4.5 h-10 px-4.5 py-3.5 rounded-md cursor-pointer bg-[#D93D00] text-amber-50 lg:hover:bg-amber-50 lg:hover:text-[#D93D00] transition-all duration-300"
+            >
+              მენიუ
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M11.62 3.22A1.004 1.004 0 0 0 9.99 4v4h-3c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h3v4a1.004 1.004 0 0 0 1 1c.22 0 .44-.07.62-.22l10-8c.24-.19.38-.48.38-.78s-.14-.59-.38-.78zm.38 14.7V15c0-.55-.45-1-1-1H8v-4h3c.55 0 1-.45 1-1V6.08L19.4 12zM2 8h2v8H2z"></path>
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
       {/* Review */}
       <div className="w-full h-200 lg:flex hidden flex-col gap-25 px-15 py-20">
         {/* header */}
         <div className="w-full lg:text-start text-center lg:space-y-0 space-y-5">
-          <h1 className="text-[#D93D00] lg:text-[38px] text-3xl test">ჩვენი მიმოხილვა</h1>
+          <h1 className="text-[#D93D00] lg:text-[38px] text-3xl test">
+            ჩვენი მიმოხილვა
+          </h1>
           <h1 className="text-black lg:text-[48px] text-4xl primary-font">
-            გემრიელი მენიუ <span className="text-[#D93D00]">& მომსახურეობა</span>
+            გემრიელი მენიუ{" "}
+            <span className="text-[#D93D00]">& მომსახურეობა</span>
           </h1>
           <p className="text-[#00000098]">
             მრავალფეროვანი მენიუ, რაც მთავარია თქვენთვის მორგებული.
@@ -140,25 +180,27 @@ export default function Home() {
         </div>
         {/* Reviews */}
         <Reveal>
-        <div className="w-full flex lg:flex-row flex-col">
-          <ReviewSlider />
-        </div>
+          <div className="w-full flex lg:flex-row flex-col">
+            <ReviewSlider />
+          </div>
         </Reveal>
       </div>
       {/* Callback */}
       <div className="w-full h-100 callback">
         <div className="w-full h-full lg:px-20 px-5 lg:py-10 py-15 flex flex-col lg:gap-0 gap-10 bg-[#d93d00ad]">
           <Reveal>
-          <h1 className="lg:text-[56px] text-3xl lg:text-start text-center text-amber-50 leading-normal font-['Radio_Canada_Big',sans-serif]">
-            Get your food from
-          </h1>
-          <div className="w-full flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center">
-            <h1 className="lg:text-[156px] text-6xl text-amber-50">STREET#1</h1>
+            <h1 className="lg:text-[56px] text-3xl lg:text-start text-center text-amber-50 leading-normal font-['Radio_Canada_Big',sans-serif]">
+              Get your food from
+            </h1>
+            <div className="w-full flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center">
+              <h1 className="lg:text-[156px] text-6xl text-amber-50">
+                STREET#1
+              </h1>
 
-            <button className="lg:w-122.75 w-45 lg:h-22.5 h-10 inline-flex px-5.5 lg:py-4 bg-amber-50 text-[#D93D00] justify-center items-center lg:text-[48px] text-[15px] rounded-xl cursor-pointer lg:hover:bg-[#D93D00] lg:hover:text-amber-50 transition-all duration-300">
-              შეუკვეთე ახლავე
-            </button>
-          </div>
+              <button className="lg:w-122.75 w-45 lg:h-22.5 h-10 inline-flex px-5.5 lg:py-4 bg-amber-50 text-[#D93D00] justify-center items-center lg:text-[48px] text-[15px] rounded-xl cursor-pointer lg:hover:bg-[#D93D00] lg:hover:text-amber-50 transition-all duration-300">
+                შეუკვეთე ახლავე
+              </button>
+            </div>
           </Reveal>
         </div>
       </div>
