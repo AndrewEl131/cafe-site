@@ -1,6 +1,13 @@
 import Footer from "@/components/Footer";
 import React from "react";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ჩვენს შესახებ",
+  description: "გვერდი ჩვენს შესახებ კაფე STREET#1-ის საიტიზე",
+};
+
 
 export default function about() {
   return (

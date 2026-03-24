@@ -2,6 +2,13 @@
 
 import React from "react";
 import { useEffect, useState } from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "მენიუ",
+  description: "მენიუს გვერდი კაფე STREET#1-ის საიტიზე",
+};
+
 
 type MenuCategory = {
   _id: string;

@@ -1,5 +1,12 @@
 import React from "react";
 import ContactForm from "./ContactForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "კონტაქტი",
+  description: "კონტაქტ გვერდი კაფე STREET#1-ის საიტიზე",
+};
+
 
 export default function contact() {
   return (
