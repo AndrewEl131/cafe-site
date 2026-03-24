@@ -3,7 +3,6 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import BurgerMenu from "./BurgerMenu";
 import Link from "next/link";
 
 export default function Header() {
@@ -55,7 +54,7 @@ export default function Header() {
       )}
 
       {isBurgerOpen && (
-        <div className="w-50 h-300 flex flex-col gap-5 px-5 py-5 bg-[#D93D00] absolute top-0 right-0 z-120">
+        <div className="w-50 h-300 flex flex-col gap-5 px-5 py-5 bg-[#D93D00] absolute top-0 right-0 z-120 burger-menu">
           <div className="w-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"

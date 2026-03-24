@@ -53,10 +53,10 @@ export default function Home() {
         <div className="lettuce"></div>
       </div>
       {/* offers */}
-      <div className="w-full lg:h-200 h-180 flex bg-[#D93D00] z-50 offers">
+      <div className="w-full lg:h-200 h-130 flex bg-[#D93D00] z-50 offers">
         <div className="lg:w-[55vw] w-full h-full space-y-10 lg:px-15 px-6 pt-20">
-          <div className="flex flex-col lg:gap-0 gap-4 text-white testa">
-            <Reveal>
+          <Reveal>
+          <div className="flex flex-col lg:gap-0 gap-3 text-white testa">
             <div className="lg:w-133.5 w-full lg:text-[44px] text-[20px] lg:text-start text-center text-[#D93D00] test px-3.5 py-3.5 bg-white rounded-full lg:hover:mb-4 duration-300 transition-all ">
               <h1>სპეციალური შეთავაზებები</h1>
             </div>
@@ -64,16 +64,16 @@ export default function Home() {
             <h1 className="xl:text-[60px] lg:text-[48px] text-2xl lg:text-start text-center font-semibold primary-font">
               მიიღეთ 40% ფასდაკლება
             </h1>
-            <h1 className="xl:text-[58px] lg:text-[45px] lg:text-start text-center primary-font mb-1">
+            <h1 className="xl:text-[58px] lg:text-[45px] text-[18px] lg:text-start text-center primary-font mb-1">
               მენიუს ყველა პუნქტზე
             </h1>
             <p className="lg:w-130.5 w-full text-[18px] lg:text-start text-center opacity-60">
               ჩვენ გვაქვს მაღალი ხარისხის მომსახურეობა, და მომხმარებელს ყოველთვის
               განსხვავებულს ვთავაზობთ.
             </p>
-            </Reveal>
           </div>
-          <div className="lg:w-125 w-full lg:h-39 md:w-110 lg:mx-0 md:mx-auto h-25 relative pastas">
+          </Reveal>
+          <div className="lg:w-125 lg:block hidden w-full lg:h-39 md:w-110 lg:mx-0 md:mx-auto h-23 relative pastas">
             <Image src={"/assets/pastas.png"} fill alt="p" />
           </div>
           <div className="w-full flex lg:flex-row flex-col items-center gap-5 offer-buttons">
@@ -120,7 +120,7 @@ export default function Home() {
         </div>
         </Reveal>
         {/* Menu Items */}
-        <div className="w-full flex lg:flex-row flex-col lg:gap-0 gap-25 justify-evenly">
+        <div className="w-full flex lg:flex-row flex-col items-center lg:gap-0 gap-25 justify-evenly">
           <MenuItem img="/assets/main-burger.png" title="საფირმო ბურგერი" price={20} />
           <MenuItem img="/assets/cheeseburger.png" title="ჩიზბურგერი" price={13} />
           <MenuItem img="/assets/peperoni.webp" title="პიცა პეპერონი" price={23.5} />
@@ -155,7 +155,7 @@ export default function Home() {
           <div className="w-full flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center">
             <h1 className="lg:text-[156px] text-6xl text-amber-50">STREET#1</h1>
 
-            <button className="lg:w-122.75 w-45 lg:h-22.5 h-10 inline-flex px-5.5 lg:py-4 bg-amber-50 text-[#D93D00] justify-center items-center lg:text-[48px] rounded-xl cursor-pointer lg:hover:bg-[#D93D00] lg:hover:text-amber-50 transition-all duration-300">
+            <button className="lg:w-122.75 w-45 lg:h-22.5 h-10 inline-flex px-5.5 lg:py-4 bg-amber-50 text-[#D93D00] justify-center items-center lg:text-[48px] text-[15px] rounded-xl cursor-pointer lg:hover:bg-[#D93D00] lg:hover:text-amber-50 transition-all duration-300">
               შეუკვეთე ახლავე
             </button>
           </div>

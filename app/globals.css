@@ -126,3 +126,16 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+.burger-menu{
+  animation: rightSlide 0.5s linear;
+}
+
+@keyframes rightSlide{
+  from {
+    right: -200px;
+  }
+  to {
+    right: 0;
+  }
+}
