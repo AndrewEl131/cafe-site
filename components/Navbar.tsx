@@ -9,9 +9,9 @@ export default function Header() {
   const pathname = usePathname();
 
   const links = [
-    { name: "სახლი", path: "/" },
+    { name: "მთავარი", path: "/" },
     { name: "ონლაინ შეკვეთა", path: "/order" },
-    { name: "ჩვენი ამბავი", path: "/about" },
+    { name: "ჩვენს შესახებ", path: "/about" },
     { name: "კონტაქტი", path: "/contact" },
   ];
 
@@ -19,9 +19,11 @@ export default function Header() {
 
   return (
     <header className="w-full lg:h-22.5 h-20 lg:px-10 px-5 flex justify-between items-center fixed top-0 left-0 z-150">
-      <div className="text-[32px] text-[#D93D00]">
-        <h1>STREET#1</h1>
-      </div>
+      <Link href={"/"}>
+        <div className="text-[32px] text-[#D93D00]">
+          <h1>STREET#1</h1>
+        </div>
+      </Link>
 
       <ul className="lg:flex hidden gap-12 primary-font">
         {links.map((link) => (
@@ -30,7 +32,6 @@ export default function Header() {
             className={`${pathname === link.path ? "text-black hover:text-[#d4d4d4]" : "text-[#dbdbdb] hover:text-[#0f0f0f]"} text-[20px] font-normal duration-200`}
             href={link.path}
           >
-            
             {link.name}
           </Link>
         ))}
