@@ -81,7 +81,7 @@ export default function Home() {
         <div className="lettuce"></div>
       </div>
       {/* offers */}
-      <div className="w-full lg:h-200 h-130 flex bg-[#D93D00] z-50 offers">
+      <div className="w-full lg:h-200 h-150 flex bg-[#D93D00] z-50 offers">
         <div className="lg:w-[55vw] w-full h-full space-y-10 lg:px-15 px-6 pt-20">
           <Reveal>
             <div className="flex flex-col lg:gap-0 gap-3 text-white testa">
@@ -219,7 +219,7 @@ export default function Home() {
                 STREET#1
               </h1>
 
-              <button className="lg:w-122.75 w-45 lg:h-22.5 h-10 inline-flex px-5.5 lg:py-4 bg-amber-50 text-[#D93D00] justify-center items-center lg:text-[48px] text-[15px] rounded-xl cursor-pointer lg:hover:bg-[#D93D00] lg:hover:text-amber-50 transition-all duration-300">
+              <button className="lg:w-122.75 w-55 lg:h-22.5 h-10 inline-flex px-5.5 lg:py-4 bg-amber-50 text-[#D93D00] justify-center items-center lg:text-[48px] text-[15px] rounded-xl cursor-pointer lg:hover:bg-[#D93D00] lg:hover:text-amber-50 transition-all duration-300">
                 შეუკვეთე ახლავე
               </button>
             </div>
