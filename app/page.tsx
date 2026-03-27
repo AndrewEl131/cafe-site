@@ -32,7 +32,7 @@ export default function Home() {
                 ყოველთვის განსხვავებულს ვთავაზობთ.
               </p>
             </div>
-            <div className="w-full flex mt-5 space-x-5">
+            <div className="w-full flex mt-5 space-x-3">
               <div className="space-y-3">
                 <a
                   href="tel:+599418646"
@@ -101,7 +101,7 @@ export default function Home() {
               </p>
             </div>
           </Reveal>
-          <div className="lg:w-125 lg:block hidden w-full lg:h-39 md:w-110 lg:mx-0 md:mx-auto h-23 relative pastas">
+          <div className="lg:w-125 lg:block hidden w-full lg:h-38 md:w-110 lg:mx-0 md:mx-auto h-23 relative pastas">
             <Image src={"/assets/pastas.png"} fill alt="p" />
           </div>
           <div className="w-full flex lg:flex-row flex-col items-center gap-5 offer-buttons">

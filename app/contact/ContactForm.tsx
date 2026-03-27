@@ -87,7 +87,7 @@ export default function ContactForm() {
       <div className="w-full flex justify-end">
         <button
           type="button"
-          className="px-3.75 py-1.5 bg-[#D93D00] text-amber-50 text-[20px]"
+          className="px-3.75 py-1.5 bg-[#D93D00] text-amber-50 text-[20px] hover:border hover:bg-amber-50 hover:text-[#D93D00] cursor-pointer duration-300"
           onClick={sendMail}
         >
           გაგზავნა

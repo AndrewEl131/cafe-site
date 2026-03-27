@@ -72,7 +72,13 @@ export default function MenuClient() {
                 </svg>
               </div>
 
-              <ul className="w-full flex flex-col gap-5">
+              <ul
+                className={`w-full flex flex-col gap-5 overflow-hidden transition-all duration-500 ease-in-out ${
+                  item.activeNumber === activeNum
+                    ? "max-h-96 opacity-100 mt-5"
+                    : "max-h-0 opacity-0"
+                }`}
+              >
                 {item.activeNumber === activeNum &&
                   item.items.map((menuItem) => (
                     <li
