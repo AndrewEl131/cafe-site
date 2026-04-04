@@ -45,7 +45,7 @@ export default function Header() {
             xmlns="http://www.w3.org/2000/svg"
             width="26"
             height="26"
-            fill="#D93D00"
+            fill="#cc5f35"
             viewBox="0 0 24 24"
           >
             <path d="M3 5h18v2H3zm0 6h18v2H3zm0 6h18v2H3z"></path>
