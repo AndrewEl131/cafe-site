@@ -10,7 +10,6 @@ export default function Header() {
 
   const links = [
     { name: "მთავარი", path: "/" },
-    { name: "ონლაინ შეკვეთა", path: "/order" },
     { name: "ჩვენს შესახებ", path: "/about" },
     { name: "კონტაქტი", path: "/contact" },
   ];
