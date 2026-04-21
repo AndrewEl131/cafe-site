@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Babuka Mtavruli";
+  src: url("/fonts/babuka-mtavruli.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "3D Unicode";
+  src: url("/fonts/3d_unicode.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-primary: #d93d00;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Babuka Mtavruli";
+  scroll-behavior: smooth;
+}
+
+.primary-font {
+  font-family: "Babuka Mtavruli";
+}
+
+.test {
+  font-family: "3D Unicode";
+}
+
+.lettuce {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 300px;
+  z-index: 50;
+  background-image: url("/assets/lettuce.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  rotate: 180deg;
+}
+
+.callback{
+  background-image: url("/assets/pasta.png");
+  background-size: 120%;
+  background-position: center;
+}
+
+@media (width >= 2060px) {
+  .testa {
+    align-items: center;
+  }
+  .pastas{
+    margin: auto;
+  }
+  .offer-buttons{
+    justify-content: center;
+  }
+  .offer-vector{
+    right: 30%;
+  }
+  .second-offer-vector{
+    right: 30%;
+    top: -2%;
+  }
+  .m{
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* animations */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 1s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.blur-in {
+  opacity: 0;
+  filter: blur(10px);
+  animation: blurIn 0.8s ease-out forwards;
+}
+
+@keyframes blurIn {
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.appear {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+.appear.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.burger-menu{
+  animation: rightSlide 0.5s linear;
+}
+
+@keyframes rightSlide{
+  from {
+    right: -200px;
+  }
+  to {
+    right: 0;
+  }
+}
