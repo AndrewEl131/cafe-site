@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 type MenuCategory = {
   id: number;
@@ -397,22 +396,23 @@ export default function MenuClient() {
       ],
     },
   ];
-
   const [activeNum, setActiveNum] = useState<number | null>(null);
 
   return (
-    <main className="pt-20 bg-[#f0f0f0]">
+    <main className="pt-20 menupage">
       <h1 className="text-5xl text-[#D93D00] text-center fade-up">
         STREET#1 / Menu
       </h1>
-      <div className="w-full flex justify-center mt-5">
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 lg:gap-25 xl:gap-35 2xl:gap-40 lg:px-0 px-5 m">
-          {menuCategories.map((item: MenuCategory) => (
+
+      <div className="w-full flex justify-center mt-10">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 lg:gap-25 xl:gap-35 2xl:gap-40 lg:px-0 px-5">
+          {menuCategories.map((item) => (
             <div
               key={item.id}
-              className="md:w-137.5 space-y-8 py-5 border-t-2 border-[#D93D00]"
+              className="md:w-135 space-y-8 py-5 border-t-2 border-[#D93D00]"
             >
-              <div className="w-full flex justify-between">
+              {/* HEADER */}
+              <div className="w-full flex justify-between items-center">
                 <div className="lg:text-[30px] text-2xl">
                   <h1 className="primary-font">{item.kaTitle}</h1>
                   <h1 className="font-sans">/{item.enTitle}</h1>
@@ -422,45 +422,43 @@ export default function MenuClient() {
                   xmlns="http://www.w3.org/2000/svg"
                   width="40"
                   height="40"
-                  fill="currentColor"
                   viewBox="0 0 24 24"
-                  className={`text-[#000000] font-light cursor-pointer duration-200 ${activeNum === item.id && "rotate-180"}`}
-                  onClick={() => {
-                    if (activeNum === item.id) {
-                      setActiveNum(null);
-                    } else {
-                      setActiveNum(item.id);
-                    }
-                  }}
+                  className={`cursor-pointer duration-300 ${
+                    activeNum === item.id ? "rotate-180" : ""
+                  }`}
+                  onClick={() =>
+                    setActiveNum(activeNum === item.id ? null : item.id)
+                  }
                 >
-                  <path d="m12 15.41 5.71-5.7-1.42-1.42-4.29 4.3-4.29-4.3-1.42 1.42z"></path>
+                  <path
+                    fill="currentColor"
+                    d="m12 15.41 5.71-5.7-1.42-1.42-4.29 4.3-4.29-4.3-1.42 1.42z"
+                  />
                 </svg>
               </div>
 
+              {/* ITEMS */}
               <ul
                 className={`w-full flex flex-col gap-5 overflow-hidden transition-all duration-500 ease-in-out ${
                   item.id === activeNum
-                    ? "max-h-96 opacity-100 mt-5"
-                    : "max-h-0 opacity-0"
+                    ? "max-h-96 opacity-100 mt-5 translate-y-0"
+                    : "max-h-0 opacity-0 -translate-y-2"
                 }`}
               >
-                {item.id === activeNum &&
-                  item.items.map((menuItem) => (
-                    <li
-                      key={menuItem.id}
-                      className="w-full flex justify-between "
-                    >
-                      <div className="lg:text-[20px] text-[17px] text-[#444444] lg:max-w-87 max-w-40">
-                        <h1 className="primary-font">{menuItem.kaTitle}</h1>
-                        <h1 className="font-sans">/{menuItem.enTitle}</h1>
-                      </div>
-                      <h1 className="font-sans font-medium text-[#b9b919] lg:text-[16px] text-[14px]">
-                        {menuItem.priceFrom === menuItem.priceTo
-                          ? `${menuItem.priceFrom}₾`
-                          : `${menuItem.priceFrom}-${menuItem.priceTo}₾`}
-                      </h1>
-                    </li>
-                  ))}
+                {item.items.map((menuItem) => (
+                  <li key={menuItem.id} className="w-full flex justify-between">
+                    <div className="lg:text-[20px] text-[17px] text-[#444444] lg:max-w-87 max-w-40">
+                      <h1 className="primary-font">{menuItem.kaTitle}</h1>
+                      <h1 className="font-sans">/{menuItem.enTitle}</h1>
+                    </div>
+
+                    <h1 className="font-sans font-medium text-[#b9b919] lg:text-[16px] text-[14px]">
+                      {menuItem.priceFrom === menuItem.priceTo
+                        ? `${menuItem.priceFrom}₾`
+                        : `${menuItem.priceFrom}-${menuItem.priceTo}₾`}
+                    </h1>
+                  </li>
+                ))}
               </ul>
             </div>
           ))}

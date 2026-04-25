@@ -47,9 +47,15 @@ body {
   rotate: 180deg;
 }
 
-.callback{
+.callback {
   background-image: url("/assets/pasta.png");
   background-size: 120%;
+  background-position: center;
+}
+
+.menupage {
+  background-image: url("/assets/menupage-bg.png");
+  background-size: cover;
   background-position: center;
 }
 
@@ -57,21 +63,21 @@ body {
   .testa {
     align-items: center;
   }
-  .pastas{
+  .pastas {
     margin: auto;
   }
-  .offer-buttons{
+  .offer-buttons {
     justify-content: center;
   }
-  .offer-vector{
+  .offer-vector {
     right: 30%;
   }
-  .second-offer-vector{
+  .second-offer-vector {
     right: 30%;
     top: -2%;
   }
-  .m{
-     grid-template-columns: repeat(3, minmax(0, 1fr));
+  .m {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -127,11 +133,11 @@ body {
   transform: translateY(0);
 }
 
-.burger-menu{
+.burger-menu {
   animation: rightSlide 0.5s linear;
 }
 
-@keyframes rightSlide{
+@keyframes rightSlide {
   from {
     right: -200px;
   }
